@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React, { useState } from 'react'; // Solo importamos React una vez
+import Calculadora from './componentes/Calculadora';
+import Contador from './componentes/Contador'; // Importar el contador
+import Camara from './componentes/Camara';
+
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container text-center">
+      <hr/>
+      <div className="row">
+        <div className="col">
+          <Calculadora />
+        </div>
+        <div className="col">
+        <Contador />
+        </div>
+        <div className="col">
+        <Camara />
+        </div>
+      </div>
+      <hr/>
     </div>
   );
 }
